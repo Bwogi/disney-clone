@@ -4,7 +4,12 @@ const Login = (props) => {
     return (
         <Container>
             <Content>
-                Content
+                {/* CTA - Call to action */}
+                <CTA>
+                    <CTALogoOne src="/images/cta-logo-one.png" alt="cta-logo-one" />
+                    <CTALogoTwo src="/images/cta-logo-two.png" alt="cta-logo-one" />
+                </CTA>
+                <BgImage />
             </Content>
         </Container>
     )
@@ -17,6 +22,59 @@ flex-direction: column;
 text-align: center;
 height: 100vh;
 `;
-const Content = styled.div``;
+const Content = styled.div`
+margin-bottom: 10vw;
+width: 100%;
+position: relative;
+min-height: 100vh;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+padding: 80px 40px;
+heigh: 100%
+`;
 
+const BgImage = styled.div`
+height: 100%;
+background-position: top;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url("/images/login-background.jpg");
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+z-index: -1;
+`
+
+const CTA = styled.div`
+margin-bottom: 2vw;
+max-width: 650px;
+flex-wrap: wrap;
+display: flex;
+flex: direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-top: 0;
+margin-right: auto;
+margin-left: auto;
+
+
+`
+
+const CTALogoOne = styled.img`
+
+`
+
+const CTALogoTwo = styled.img`
+margin-bottom: 12px;
+max-width: 600px;
+min-height: 1px;
+display: block;
+width: 100%;
+
+`
 export default Login;
