@@ -6,8 +6,8 @@ const Login = (props) => {
             <Content>
                 {/* CTA - Call to action */}
                 <CTA>
-                    <CTALogoOne src="/images/cta-logo-one.png" alt="cta-logo-one" />
-                    <CTALogoTwo src="/images/cta-logo-two.png" alt="cta-logo-one" />
+                    <CTALogoOne src="/images/cta-logo-one.svg" alt="cta-logo-one" />
+                    <SignUp>GET ALL THERE</SignUp>
                 </CTA>
                 <BgImage />
             </Content>
@@ -47,34 +47,41 @@ top: 0;
 right: 0;
 left: 0;
 z-index: -1;
-`
+`;
 
 const CTA = styled.div`
-margin-bottom: 2vw;
 max-width: 650px;
-flex-wrap: wrap;
+width: 100%;
 display: flex;
-flex: direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-margin-top: 0;
-margin-right: auto;
-margin-left: auto;
-
-
-`
+flex-direction: column;
+`;
 
 const CTALogoOne = styled.img`
-
-`
-
-const CTALogoTwo = styled.img`
 margin-bottom: 12px;
 max-width: 600px;
 min-height: 1px;
 display: block;
 width: 100%;
+`;
 
+// const CTALogoTwo = styled.img`
+
+// `
+
+const SignUp = styled.a`
+font-weight: bold;
+color: #f9f9f9;
+background-color: #0063e5;
+margin-bottom: 12px;
+width: 100%;
+letter-spacing: 1.5px;
+font-size: 18px;
+padding: 16.5px 0;
+border: 1px solid transparent;
+border-radius: 4px;
+
+a:hover {
+    background-color: yellow;
+}
 `
 export default Login;
